@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tank General</title>
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Oswald:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (иконки) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Lightbox (галерея) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <img src="assets/logo-small.png" alt="Tank General" height="40"/>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about"    data-ru="О игре"      data-en="About">О игре</a></li>
+        <li><a href="#gameplay" data-ru="Геймплей"    data-en="Gameplay">Геймплей</a></li>
+        <li><a href="#status"   data-ru="Статус"      data-en="Status">Статус</a></li>
+        <li><a href="#gallery"  data-ru="Скриншоты"   data-en="Screenshots">Скриншоты</a></li>
+        <li><a href="#contacts" data-ru="Контакты"    data-en="Contacts">Контакты</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+        <span>|</span>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="burger" id="burger">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <img src="assets/hero-banner.jpg" alt="Tank General" class="hero-bg"/>
+
+  <!-- Описание — верхняя четверть -->
+  <div class="hero-top">
+    <p class="hero-desc"
+       data-ru="Tank General — это карточная онлайн-игра в сеттинге Второй мировой, которая является сплавом игры, завязанной на формировании колоды, и настоящей тактикой на поле боя."
+       data-en="Tank General is a card-based online game set in World War II, which is a fusion of a deck-building game and real tactics on the battlefield.">
+      Tank General — это карточная онлайн-игра в сеттинге Второй мировой, которая является сплавом игры, завязанной на формировании колоды, и настоящей тактикой на поле боя.
+    </p>
+  </div>
+
+  <!-- Кнопки — нижняя четверть -->
+  <div class="hero-bottom">
+    <div class="store-buttons">
+      <a href="https://store.steampowered.com/app/4373880/Tank_General/" target="_blank" class="store-btn steam">
+        <i class="fa-brands fa-steam"></i> Steam
+      </a>
+      <a href="https://rokdoom.itch.io/tank-general" target="_blank" class="store-btn itch">
+        <i class="fa-solid fa-gamepad"></i> Itch.io
+      </a>
+      <a href="https://www.rustore.ru/catalog/app/com.RokDooM_TG" target="_blank" class="store-btn rustore">
+        <i class="fa-solid fa-mobile-screen"></i> RuStore
+      </a>
+      <a href="https://vkplay.ru/play/game/tank-generak/" target="_blank" class="store-btn vkplay">
+        <i class="fa-brands fa-vk"></i> VK Play
+      </a>
+    </div>
+  </div>
+
+  <!-- Стрелка вниз -->
+  <a href="#about" class="scroll-down">&#8964;</a>
+</section>
+
+  <!-- ========== ABOUT / GAMEPLAY ========== -->
+  <section class="section" id="about">
+    <div class="container two-col">
+      <div class="text-block" id="gameplay">
+        <h2 data-ru="Геймплей" data-en="Gameplay">Геймплей</h2>
+        <p data-ru="Отличительной особенностью игры является использование уникальных механик поведения различных типов техники:"
+           data-en="The distinctive feature of the game is the use of unique mechanics for the behavior of different types of vehicles:">
+           Отличительной особенностью игры является использование уникальных механик поведения различных типов техники:
+        </p>
+        <ul class="feature-list">
+          <li data-ru="🔵 Лёгкие танки могут совершить больше действий передвижения"
+              data-en="🔵 Light tanks can perform more movement actions">
+              🔵 Лёгкие танки могут совершить больше действий передвижения
+          </li>
+          <li data-ru="⚙️ Средние танки имеют отличную механику передвижения"
+              data-en="⚙️ Medium tanks have a movement mechanic different from other types">
+              ⚙️ Средние танки имеют отличную механику передвижения
+          </li>
+          <li data-ru="🔴 Тяжёлые танки становятся беззащитными после атаки, но имеют высокую живучесть"
+              data-en="🔴 Heavy tanks become defenseless if they attacked, compensated by high survivability">
+              🔴 Тяжёлые танки становятся беззащитными после атаки, но имеют высокую живучесть
+          </li>
+          <li data-ru="👁️ ПТ-САУ атакуют из засады — всегда наносят урон первыми"
+              data-en="👁️ Tank destroyers attack from ambush — always deal damage first">
+              👁️ ПТ-САУ атакуют из засады — всегда наносят урон первыми
+          </li>
+          <li data-ru="💥 САУ могут атаковать любую обнаруженную цель на поле боя"
+              data-en="💥 SPGs can attack any detected target on the battlefield">
+              💥 САУ могут атаковать любую обнаруженную цель на поле боя
+          </li>
+        </ul>
+        <p class="highlight-text"
+           data-ru="Геймплей захватывающий, с большой тактической глубиной — и по-настоящему уникальный. Прямых аналогов с такой комбинацией механик нет."
+           data-en="This gameplay is captivating, has great tactical depth, and is truly unique — there are no direct analogues with this combination of mechanics.">
+           Геймплей захватывающий, с большой тактической глубиной — и по-настоящему уникальный. Прямых аналогов с такой комбинацией механик нет.
+        </p>
+      </div>
+      <!-- Видео -->
+      <div class="video-block">
+        <div class="video-wrapper" id="video-container">
+          <!-- JS подменит src в зависимости от языка -->
+          <iframe id="game-trailer"
+            src="https://rutube.ru/play/embed/6f72fcbc467d477ea1df48f8608042ba"
+            allowfullscreen
+            title="Tank General Trailer">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATUS ========== -->
+  <section class="section section-dark" id="status">
+    <div class="container two-col reverse">
+      <div class="text-block">
+        <h2 data-ru="Текущее состояние" data-en="Current Status">Текущее состояние</h2>
+        <p data-ru="Игра уже имеет полностью рабочую демо-версию с несколькими режимами (включая основной PvP 1v1), менеджер колод, систему исследования и три полноценные нации."
+           data-en="The game already has a fully working demo version with several modes (including the main PvP 1v1), a deck manager, a research system, and three full nations.">
+           Игра уже имеет полностью рабочую демо-версию с несколькими режимами (включая основной PvP 1v1), менеджер колод, систему исследования и три полноценные нации.
+        </p>
+        <ul class="feature-list">
+          <li data-ru="🃏 ~150 карт техники, ~50 приказов, 27 видов штабов"
+              data-en="🃏 ~150 vehicle cards, ~50 orders (spells), 27 HQ types">
+              🃏 ~150 карт техники, ~50 приказов, 27 видов штабов
+          </li>
+          <li data-ru="🌍 3 нации: СССР, Германия, США"
+              data-en="🌍 3 nations: USSR, Germany, USA">
+              🌍 3 нации: СССР, Германия, США
+          </li>
+          <li data-ru="⚔️ PvP режим 1 на 1 (основной режим)"
+              data-en="⚔️ PvP 1v1 battle mode (main mode)">
+              ⚔️ PvP режим 1 на 1 (основной режим)
+          </li>
+          <li data-ru="🎯 Несколько PvE-режимов: обучение, сценарий, рейд, тренировка"
+              data-en="🎯 Several PvE modes: tutorial, campaign, raid, training">
+              🎯 Несколько PvE-режимов: обучение, сценарий, рейд, тренировка
+          </li>
+          <li data-ru="🌐 Локализация: русский, английский, китайский (упрощённый)"
+              data-en="🌐 Localization: Russian, English, Chinese (Simplified)">
+              🌐 Локализация: русский, английский, китайский (упрощённый)
+          </li>
+          <li data-ru="🔬 Менеджер колод, система исследования и прокачки карт"
+              data-en="🔬 Deck manager, card research and upgrade system">
+              🔬 Менеджер колод, система исследования и прокачки карт
+          </li>
+        </ul>
+      </div>
+      <!-- Гифка сбоку -->
+      <div class="gif-block">
+        <img src="assets/gifs/research.gif" alt="Research system" class="side-gif"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title" data-ru="Скриншоты и геймплей" data-en="Screenshots & Gameplay">
+        Скриншоты и геймплей
+      </h2>
+      <div class="gallery-grid">
+        <!-- Гифки -->
+        <a href="assets/gifs/gameplay1.gif" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/gifs/gameplay1.gif" alt="Gameplay"/>
+        </a>
+        <a href="assets/gifs/gameplay2.gif" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/gifs/gameplay2.gif" alt="Gameplay"/>
+        </a>
+        <!-- Скриншоты — дублируй этот блок для каждого -->
+        <a href="assets/screenshots/screen01.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen01.jpg" alt="Screenshot 1"/>
+        </a>
+        <a href="assets/screenshots/screen02.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen02.jpg" alt="Screenshot 2"/>
+        </a>
+        <a href="assets/screenshots/screen03.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen03.jpg" alt="Screenshot 3"/>
+        </a>
+        <a href="assets/screenshots/screen04.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen04.jpg" alt="Screenshot 4"/>
+        </a>
+        <a href="assets/screenshots/screen05.jpg" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/screenshots/screen05.jpg" alt="Screenshot 5"/>
+        </a>
+        <a href="assets/screenshots/screen06.jpg" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/screenshots/screen06.jpg" alt="Screenshot 6"/>
+        </a>
+        <a href="assets/screenshots/screen07.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen07.jpg" alt="Screenshot 7"/>
+        </a>
+        <a href="assets/screenshots/screen08.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen08.jpg" alt="Screenshot 8"/>
+        </a>
+        <a href="assets/screenshots/screen09.jpg" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/screenshots/screen09.jpg" alt="Screenshot 9"/>
+        </a>
+        <a href="assets/screenshots/screen10.jpg" data-lightbox="gallery" class="gallery-item wide ">
+          <img src="assets/screenshots/screen10.jpg" alt="Screenshot 10"/>
+        </a>
+        <a href="assets/screenshots/screen11.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen11.jpg" alt="Screenshot 11"/>
+        </a>
+        <a href="assets/screenshots/screen12.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen12.jpg" alt="Screenshot 12"/>
+        </a>
+        <a href="assets/screenshots/screen13.jpg" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/screenshots/screen13.jpg" alt="Screenshot 13"/>
+        </a>
+        <a href="assets/screenshots/screen14.jpg" data-lightbox="gallery" class="gallery-item wide">
+          <img src="assets/screenshots/screen14.jpg" alt="Screenshot 14"/>
+        </a>
+        <a href="assets/screenshots/screen15.jpg" data-lightbox="gallery" class="gallery-item">
+          <img src="assets/screenshots/screen15.jpg" alt="Screenshot 15"/>
+        </a>
+        
+        <!-- Добавь остальные по аналогии -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTS ========== -->
+  <section class="section section-dark" id="contacts">
+    <div class="container contact-block">
+      <h2 class="section-title" data-ru="Контакты" data-en="Contacts">Контакты</h2>
+      <p data-ru="Есть вопросы или предложения? Свяжитесь с нами!"
+         data-en="Have questions or suggestions? Get in touch!">
+         Есть вопросы или предложения? Свяжитесь с нами!
+      </p>
+      <div class="social-links">
+        <a href="mailto:RokDooM@gmail.com" class="social-btn email">
+          <i class="fa-solid fa-envelope"></i>
+          <span>RokDooM@gmail.com</span>
+        </a>
+        <a href="https://vk.com/ccg_tank_general" target="_blank" class="social-btn vk">
+          <i class="fa-brands fa-vk"></i>
+          <span>ВКонтакте</span>
+        </a>
+        <a href="https://t.me/Tank_General" target="_blank" class="social-btn tg">
+          <i class="fa-brands fa-telegram"></i>
+          <span>Telegram</span>
+        </a>
+        <a href="https://www.youtube.com/@Tank_General" target="_blank" class="social-btn yt">
+          <i class="fa-brands fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+  <div class="footer-inner">
+    <p data-ru="© 2025 Tank General. Все права защищены."
+       data-en="© 2025 Tank General. All rights reserved.">
+       © 2025 Tank General. Все права защищены.
+    </p>
+    <p class="footer-credit">
+      Game by <span class="gold">RokDooM</span>
+      &nbsp;·&nbsp;
+      Web by <span class="gold">FuraDoc</span>
+      &nbsp;/&nbsp;
+      <span class="gold">Yardi IT Group</span>
+    </p>
+  </div>
+ </footer>
+
+  <!-- Скрипты -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
