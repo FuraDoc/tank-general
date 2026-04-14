@@ -5,11 +5,14 @@ function setLang(lang) {
   currentLang = lang;
 
   // Обновляем все элементы с data-ru / data-en
-  document.querySelectorAll('[data-ru]').forEach(el => {
-    if (el.dataset[lang]) {
+document.querySelectorAll('[data-ru]').forEach(el => {
+  if (el.dataset[lang]) {
+    // Если внутри есть img или другие теги — не трогаем
+    if (el.children.length === 0) {
       el.textContent = el.dataset[lang];
     }
-  });
+  }
+});
 
   // Активная кнопка языка
   document.querySelectorAll('.lang-btn').forEach(btn => {
