@@ -426,6 +426,13 @@ body {
   background: rgba(200, 168, 75, 0.12);
 }
 
+.feature-list img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 .highlight-text {
   font-style: italic;
   color: var(--gold-light) !important;
